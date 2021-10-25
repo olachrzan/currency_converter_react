@@ -1,0 +1,48 @@
+.form {
+   max-width: 500px;
+   margin: 40px auto 0;
+   text-align: center;
+}
+
+.form__header {
+   max-width: 600px;
+   margin: 20px auto;
+   text-align: center;
+   border-bottom: 4px solid rgb(125, 178, 37);
+   padding-bottom: 15px;
+   font-size: 30px;
+   font-weight: 400;
+}
+
+.form__label {
+   display: block;
+   margin: 30px;
+}
+
+.form__labelText {
+   display: inline-block;
+   width: 150px;
+   margin-bottom: 10px;
+   font-size: 20px;
+}
+
+.form__field {
+   max-width: 400px;
+   padding: 5px;
+   border-radius: 5px;
+   border: 2px solid #bbb;
+}
+
+.form__field:invalid {
+   border: 2px solid rgb(255, 186, 186);
+   background-color: rgba(255, 186, 186, 0.541);
+}
+
+.form__field--size {
+   max-width: 211px;
+   padding: 8px;
+}
+
+.form__paragraph {
+   margin: 10px 0;
+}

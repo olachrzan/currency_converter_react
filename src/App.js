@@ -1,9 +1,11 @@
+import Container from "./Container";
+import Form from "./Form";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Container>
+      <Form />
+    </Container>
   );
 }
 
