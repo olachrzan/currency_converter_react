@@ -1,3 +1,4 @@
+import Button from "../Button";
 import "./style.css";
 
 const Form = () => (
@@ -22,7 +23,7 @@ const Form = () => (
             <option value="CHF">CHF - frank szwajcarski</option>
          </select>
       </label>
-      <input className="button" type="submit" value="Przelicz" />
+      <Button />
       <p className="form__paragraph">
          * - Należy wpisać liczbę, która ma max. dwa miejsca po przecinku
       </p>
