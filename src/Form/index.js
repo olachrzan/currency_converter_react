@@ -3,6 +3,7 @@ import { useState } from "react";
 import { currencies } from "../currencies";
 import Button from "../Button";
 import Result from "../Result";
+import RateContainer from "../RateContainer";
 
 const Form = ({ calculateResult, result }) => {
 	const [amount, setAmount] = useState("");
@@ -41,6 +42,7 @@ const Form = ({ calculateResult, result }) => {
 					))}
 				</select>
 			</label>
+			<RateContainer currencies={currencies} currency={currency} />
 			<Button />
 			<Result result={result} />
 			<p className="form__paragraph">
