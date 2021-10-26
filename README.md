@@ -6,7 +6,7 @@ It's a simply currency converter that will be further developed.<br>
 You can convert PLN to EUR, USD, GBP or CHF.
 
 ## Demo
-You can find the demo [here]()
+You can find the demo [here](https://olachrzan.github.io/currency_converter_react/)
 
 ## Technologies
 - HTML
