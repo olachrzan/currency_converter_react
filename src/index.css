@@ -8,6 +8,9 @@ html {
 
 body {
   padding: 0 5%;
-  background-color: #e7e7e7;
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: #e7e7e7;
+  background-image: url(bg-image.png);
+  background-size: cover;
+  background-position: center;
 }
