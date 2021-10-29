@@ -33,7 +33,7 @@
    border: 2px solid #bbb;
 }
 
-.form__field:invalid {
+.form_field--validated:invalid {
    border: 2px solid rgb(255, 186, 186);
    background-color: rgba(255, 186, 186, 0.541);
 }

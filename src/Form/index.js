@@ -7,6 +7,7 @@ import RateContainer from "../RateContainer";
 const Form = ({ calculateResult, result }) => {
 	const [amount, setAmount] = useState("");
 	const [currency, setCurrency] = useState(currencies[0].shortName);
+	const [wasValidated, setWasValidated] = useState(false);
 
 	const onFormSubmit = (event) => {
 		event.preventDefault();
@@ -20,7 +21,8 @@ const Form = ({ calculateResult, result }) => {
 				<input
 					value={amount}
 					onChange={({ target }) => setAmount(target.value)}
-					className="form__field form__field--size"
+					onBlur={() => { setWasValidated(true) }}
+					className={`form__field form__field--size ${wasValidated ? 'form_field--validated' : ''}`}
 					placeholder="Wpisz kwotę"
 					type="number"
 					min="0.01"
@@ -42,7 +44,12 @@ const Form = ({ calculateResult, result }) => {
 				</select>
 			</label>
 			<RateContainer currencies={currencies} currency={currency} />
-			<input className="form__button" type="submit" value="Przelicz" />
+			<input
+				className="form__button"
+				type="submit"
+				value="Przelicz"
+				onClick={() => setWasValidated(true)}
+			/>
 			<Result result={result} />
 			<p className="form__paragraph">
 				* - Należy wpisać liczbę, która ma max. dwa miejsca po przecinku
