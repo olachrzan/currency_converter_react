@@ -1,7 +1,6 @@
 import "./style.css";
 import { useState } from "react";
 import { currencies } from "../currencies";
-import Button from "../Button";
 import Result from "../Result";
 import RateContainer from "../RateContainer";
 
@@ -43,7 +42,7 @@ const Form = ({ calculateResult, result }) => {
 				</select>
 			</label>
 			<RateContainer currencies={currencies} currency={currency} />
-			<Button />
+			<input className="form__button" type="submit" value="Przelicz" />
 			<Result result={result} />
 			<p className="form__paragraph">
 				* - Należy wpisać liczbę, która ma max. dwa miejsca po przecinku
