@@ -2,6 +2,7 @@ import { useState } from "react";
 import Container from "./Container";
 import { currencies } from "./currencies";
 import Form from "./Form";
+import Clock from "./Clock";
 
 function App() {
   const [result, setResult] = useState();
@@ -15,9 +16,12 @@ function App() {
   }
 
   return (
-    <Container>
-      <Form calculateResult={calculateResult} result={result} />
-    </Container>
+    <>
+      <Container>
+        <Clock />
+        <Form calculateResult={calculateResult} result={result} />
+      </Container>
+    </>
   );
 }
 
