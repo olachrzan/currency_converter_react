@@ -1,8 +1,8 @@
-import "./style.css";
 import { useState } from "react";
 import { currencies } from "../currencies";
 import Result from "./Result";
 import RateContainer from "./RateContainer";
+import { StyledForm, Header, Label, LabelText, Field, Button, Info } from "./styled";
 
 const Form = ({ calculateResult, result }) => {
 	const [amount, setAmount] = useState("");
@@ -15,46 +15,47 @@ const Form = ({ calculateResult, result }) => {
 	};
 
 	return (
-		<form className="form" onSubmit={onFormSubmit}>
-			<h2 className="form__header">Przelicz walutę</h2>
-			<label className="form__label"><span className="form__labelText">Kwota w PLN:*</span>
-				<input
+		<StyledForm onSubmit={onFormSubmit}>
+			<Header>Przelicz walutę</Header>
+			<Label>
+				<LabelText>Kwota w PLN:*</LabelText>
+				<Field as="input"
+					dimension
+					validated={wasValidated}
 					value={amount}
 					onChange={({ target }) => setAmount(target.value)}
 					onBlur={() => { setWasValidated(true) }}
-					className={`form__field form__field--size ${wasValidated ? 'form_field--validated' : ''}`}
 					placeholder="Wpisz kwotę"
 					type="number"
 					min="0.01"
 					step="0.01"
 					required
 				/>
-			</label>
-			<label className="form__label"><span className="form__labelText">Przelicz na:</span>
-				<select
+			</Label>
+			<Label>
+				<LabelText>Przelicz na:</LabelText>
+				<Field
 					value={currency}
 					onChange={({ target }) => setCurrency(target.value)}
-					className="form__field"
 				>
 					{currencies.map(i => (
 						<option key={i.shortName} value={i.shortName} >
 							{i.name}
 						</option>
 					))}
-				</select>
-			</label>
+				</Field>
+			</Label>
 			<RateContainer currencies={currencies} currency={currency} />
-			<input
-				className="form__button"
+			<Button
 				type="submit"
 				value="Przelicz"
 				onClick={() => setWasValidated(true)}
 			/>
 			<Result result={result} />
-			<p className="form__paragraph">
+			<Info>
 				* - Należy wpisać liczbę, która ma max. dwa miejsca po przecinku
-			</p>
-		</form>
+			</Info>
+		</StyledForm>
 	)
 };
 
