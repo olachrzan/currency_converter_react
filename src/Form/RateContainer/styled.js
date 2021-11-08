@@ -6,7 +6,7 @@ const Container = styled.div`
   grid-template-columns: 1fr 135px 200px 1fr;
   gap: 30px;
 
-  @media (max-width: 500px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     display: block;
   }
 `;
@@ -17,7 +17,7 @@ const Text = styled.p`
   font-size: 20px;
   text-align: right;
 
-  @media (max-width: 500px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     text-align: center;
   }
 
@@ -25,7 +25,7 @@ const Text = styled.p`
     grid-column: 3 / 4;
     text-align: left;
 
-    @media (max-width: 500px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
       margin-top: 10px;
       text-align: center;
     }

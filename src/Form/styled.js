@@ -9,7 +9,7 @@ const StyledForm = styled.form`
 const Header = styled.h2`
   margin: 20px auto;
   text-align: center;
-  border-bottom: 4px solid rgb(125, 178, 37);
+  border-bottom: 4px solid ${({ theme }) => theme.colors.lima};
   padding-bottom: 15px;
   font-size: 30px;
   font-weight: 400;
@@ -39,8 +39,8 @@ const Field = styled.select`
 
   ${({ validated }) => validated && css`
     &:invalid {
-      border: 2px solid rgb(255, 186, 186);
-      background-color: rgba(255, 186, 186, 0.541);
+      border: 2px solid ${({ theme }) => theme.colors.sundown};
+      background-color: ${({ theme }) => theme.colors.cosmos};
     }
   `}
 `;
@@ -48,23 +48,23 @@ const Field = styled.select`
 const Button = styled.input`
   margin: 0 20px 15px;
   padding: 10px 20px;
-  background-color: hsl(83, 73%, 39%);
-  border: 2px solid hsl(83, 73%, 35%);
+  background-color: ${({ theme }) => theme.colors.lima};
+  border: 2px solid ${({ theme }) => theme.colors.olive};
   border-radius: 5px;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   font-size: 18px;
   font-weight: 500;
   text-shadow: 2px 2px 2px rgb(41, 56, 15);
   cursor: pointer;
-  transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, filter 0.1s ease-in-out;
 
   &:hover {
     transform: scale(1.05);
-    background-color: hsl(83, 73%, 37%);
+    filter: brightness(105%);
   }
 
   &:active {
-    background-color: hsl(83, 73%, 35%);
+    filter: brightness(110%);
   }
 `;
 
