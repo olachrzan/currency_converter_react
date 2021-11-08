@@ -12,8 +12,9 @@ You can find the demo [here](https://olachrzan.github.io/currency_converter_reac
 - HTML
 - CSS
 - JavaScript
-- BEM
 - Create React App
+- Styled Components
+- React Hooks
 
 ## Available Scripts
 
