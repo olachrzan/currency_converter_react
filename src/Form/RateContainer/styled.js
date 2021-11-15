@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const Container = styled.div`
+const StyledContainer = styled.div`
   margin-bottom: 30px;
   display: grid;
   grid-template-columns: 1fr 135px 200px 1fr;
@@ -11,7 +11,7 @@ const Container = styled.div`
   }
 `;
 
-const Text = styled.p`
+const StyledText = styled.p`
   grid-column: 2 / 3;
   margin: 0;
   font-size: 20px;
@@ -32,4 +32,4 @@ const Text = styled.p`
   `}
 `;
 
-export { Container, Text };
+export { StyledContainer, StyledText };

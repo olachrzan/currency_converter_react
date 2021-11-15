@@ -2,7 +2,7 @@ import { useState } from "react";
 import { currencies } from "../currencies";
 import Result from "./Result";
 import RateContainer from "./RateContainer";
-import { StyledForm, Header, Label, LabelText, Field, Button, Info } from "./styled";
+import { StyledForm, StyledHeader, StyledLabel, StyledLabelText, StyledField, StyledButton, StyledInfo } from "./styled";
 
 const Form = ({ calculateResult, result }) => {
 	const [amount, setAmount] = useState("");
@@ -16,10 +16,10 @@ const Form = ({ calculateResult, result }) => {
 
 	return (
 		<StyledForm onSubmit={onFormSubmit}>
-			<Header>Przelicz walutę</Header>
-			<Label>
-				<LabelText>Kwota w PLN:*</LabelText>
-				<Field as="input"
+			<StyledHeader>Przelicz walutę</StyledHeader>
+			<StyledLabel>
+				<StyledLabelText>Kwota w PLN:*</StyledLabelText>
+				<StyledField as="input"
 					dimension
 					validated={wasValidated}
 					value={amount}
@@ -31,10 +31,10 @@ const Form = ({ calculateResult, result }) => {
 					step="0.01"
 					required
 				/>
-			</Label>
-			<Label>
-				<LabelText>Przelicz na:</LabelText>
-				<Field
+			</StyledLabel>
+			<StyledLabel>
+				<StyledLabelText>Przelicz na:</StyledLabelText>
+				<StyledField
 					value={currency}
 					onChange={({ target }) => setCurrency(target.value)}
 				>
@@ -43,18 +43,18 @@ const Form = ({ calculateResult, result }) => {
 							{i.name}
 						</option>
 					))}
-				</Field>
-			</Label>
+				</StyledField>
+			</StyledLabel>
 			<RateContainer currencies={currencies} currency={currency} />
-			<Button
+			<StyledButton
 				type="submit"
 				value="Przelicz"
 				onClick={() => setWasValidated(true)}
 			/>
 			<Result result={result} />
-			<Info>
+			<StyledInfo>
 				* - Należy wpisać liczbę, która ma max. dwa miejsca po przecinku
-			</Info>
+			</StyledInfo>
 		</StyledForm>
 	)
 };

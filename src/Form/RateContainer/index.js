@@ -1,12 +1,12 @@
-import { Container, Text } from "./styled";
+import { StyledContainer, StyledText } from "./styled";
 
 const RateContainer = ({ currencies, currency }) => (
-  <Container>
-    <Text>Aktualny kurs:</Text>
-    <Text last>
+  <StyledContainer>
+    <StyledText>Aktualny kurs:</StyledText>
+    <StyledText last>
       {currencies.find(({ shortName }) => shortName === currency).rate.toFixed(2)}
-    </Text>
-  </Container>
+    </StyledText>
+  </StyledContainer>
 );
 
 export default RateContainer;

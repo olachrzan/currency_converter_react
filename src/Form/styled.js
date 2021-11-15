@@ -6,7 +6,7 @@ const StyledForm = styled.form`
   text-align: center;
 `;
 
-const Header = styled.h2`
+const StyledHeader = styled.h2`
   margin: 20px auto;
   text-align: center;
   border-bottom: 4px solid ${({ theme }) => theme.colors.lima};
@@ -15,19 +15,19 @@ const Header = styled.h2`
   font-weight: 400;
 `;
 
-const Label = styled.label`
+const StyledLabel = styled.label`
   display: block;
   margin: 30px;
 `;
 
-const LabelText = styled.span`
+const StyledLabelText = styled.span`
   display: inline-block;
   width: 150px;
   margin: 0 0 10px;
   font-size: 20px;
 `;
 
-const Field = styled.select`
+const StyledField = styled.select`
   max-width: 400px;
   padding: 5px;
   border-radius: 5px;
@@ -45,7 +45,7 @@ const Field = styled.select`
   `}
 `;
 
-const Button = styled.input`
+const StyledButton = styled.input`
   margin: 0 20px 15px;
   padding: 10px 20px;
   background-color: ${({ theme }) => theme.colors.lima};
@@ -68,9 +68,9 @@ const Button = styled.input`
   }
 `;
 
-const Info = styled.p`
+const StyledInfo = styled.p`
   margin: 20px 0;
 `;
 
 
-export { StyledForm, Header, Label, LabelText, Field, Button, Info };
+export { StyledForm, StyledHeader, StyledLabel, StyledLabelText, StyledField, StyledButton, StyledInfo };
