@@ -7,12 +7,15 @@ import {
 	StyledHeader,
 	StyledLoadingText,
 	StyledLoadingItem,
+	StyledErrorText,
+	StyledErrorImage,
 	StyledLabel,
 	StyledLabelText,
 	StyledField,
 	StyledButton,
 	StyledInfo
 } from "./styled";
+import sadFace from "../sadFace.png"
 
 const Form = () => {
 	const ratesData = useRatesData();
@@ -45,7 +48,16 @@ const Form = () => {
 					</>
 				)
 				: (ratesData.state === "error"
-					? (<p>Błąd</p>)
+					? (
+						<>
+							<StyledErrorText><strong>Ups... Coś poszło nie tak.</strong></StyledErrorText>
+							<p>
+								Sprawdź połączenie z internetem. Jeśli działa jak należy powodem może być
+								błąd podczas pobierania danych - spróbuj później.
+							</p>
+							<StyledErrorImage src={sadFace}></StyledErrorImage>
+						</>
+					)
 					: (
 						<>
 							<StyledLabel>

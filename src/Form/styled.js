@@ -39,11 +39,19 @@ export const StyledLoadingItem = styled.div`
     border-radius: 50%;
     border-width: 6px;
     border-style: solid;
-    border-color: ${({theme}) => theme.colors.lima} transparent ${({theme}) => theme.colors.lima} transparent;
+    border-color: ${({ theme }) => theme.colors.lima} transparent ${({ theme }) => theme.colors.lima} transparent;
     animation-name: ${breatheAnimation};
     animation-duration: 1.2s;
     animation-iteration-count: infinite;
   }
+`;
+
+export const StyledErrorText = styled(StyledLoadingText)`
+  color: ${({ theme }) => theme.colors.brickRed};
+`;
+
+export const StyledErrorImage = styled.img`
+  width: 40px;
 `;
 
 export const StyledLabel = styled.label`
