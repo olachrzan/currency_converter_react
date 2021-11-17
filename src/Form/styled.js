@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 const StyledForm = styled.form`
   max-width: 500px;
-  margin: 40px auto 0;
+  margin: 30px auto 0;
   text-align: center;
 `;
 
@@ -17,7 +17,7 @@ const StyledHeader = styled.h2`
 
 const StyledLabel = styled.label`
   display: block;
-  margin: 30px;
+  margin: 20px;
 `;
 
 const StyledLabelText = styled.span`
@@ -28,13 +28,16 @@ const StyledLabelText = styled.span`
 `;
 
 const StyledField = styled.select`
-  max-width: 400px;
+  width: 180px;
   padding: 5px;
   border-radius: 5px;
   border: 2px solid #bbb;
+  text-align: center;
 
   ${({ dimension }) => dimension && css`
     padding: 8px;
+  text-align: left;
+
   `}
 
   ${({ validated }) => validated && css`
@@ -46,7 +49,7 @@ const StyledField = styled.select`
 `;
 
 const StyledButton = styled.input`
-  margin: 0 20px 15px;
+  margin: 0 20px 10px;
   padding: 10px 20px;
   background-color: ${({ theme }) => theme.colors.lima};
   border: 2px solid ${({ theme }) => theme.colors.olive};
@@ -69,7 +72,12 @@ const StyledButton = styled.input`
 `;
 
 const StyledInfo = styled.p`
-  margin: 20px 0;
+  margin: 15px 0;
+  line-height: 25px;
+
+  ${({ tip }) => tip && css`
+    color: ${({ theme }) => theme.colors.brickRed};
+  `}
 `;
 
 
