@@ -5,6 +5,8 @@ import { useRatesData } from "../useRatesData";
 import {
 	StyledForm,
 	StyledHeader,
+	StyledLoadingText,
+	StyledLoadingItem,
 	StyledLabel,
 	StyledLabelText,
 	StyledField,
@@ -36,7 +38,12 @@ const Form = () => {
 		<StyledForm onSubmit={onFormSubmit}>
 			<StyledHeader>Przelicz walutę</StyledHeader>
 			{ratesData.state === "loading"
-				? (<p>Loading</p>)
+				? (
+					<>
+						<StyledLoadingText>Chwila, pobierane są kursy walut</StyledLoadingText>
+						<StyledLoadingItem></StyledLoadingItem>
+					</>
+				)
 				: (ratesData.state === "error"
 					? (<p>Błąd</p>)
 					: (

@@ -1,12 +1,12 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
-const StyledForm = styled.form`
+export const StyledForm = styled.form`
   max-width: 500px;
   margin: 30px auto 0;
   text-align: center;
 `;
 
-const StyledHeader = styled.h2`
+export const StyledHeader = styled.h2`
   margin: 20px auto;
   text-align: center;
   border-bottom: 4px solid ${({ theme }) => theme.colors.lima};
@@ -15,19 +15,50 @@ const StyledHeader = styled.h2`
   font-weight: 400;
 `;
 
-const StyledLabel = styled.label`
+export const StyledLoadingText = styled.p`
+  margin: 60px 0 10px;
+  font-size: 20px;
+`;
+
+const breatheAnimation = keyframes`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`;
+
+export const StyledLoadingItem = styled.div`
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+
+  &::after {
+    content: " ";
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    border-radius: 50%;
+    border-width: 6px;
+    border-style: solid;
+    border-color: ${({theme}) => theme.colors.lima} transparent ${({theme}) => theme.colors.lima} transparent;
+    animation-name: ${breatheAnimation};
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+  }
+`;
+
+export const StyledLabel = styled.label`
   display: block;
   margin: 20px;
 `;
 
-const StyledLabelText = styled.span`
+export const StyledLabelText = styled.span`
   display: inline-block;
   width: 150px;
   margin: 0 0 10px;
   font-size: 20px;
 `;
 
-const StyledField = styled.select`
+export const StyledField = styled.select`
   width: 180px;
   padding: 5px;
   border-radius: 5px;
@@ -48,7 +79,7 @@ const StyledField = styled.select`
   `}
 `;
 
-const StyledButton = styled.input`
+export const StyledButton = styled.input`
   margin: 0 20px 10px;
   padding: 10px 20px;
   background-color: ${({ theme }) => theme.colors.lima};
@@ -71,7 +102,7 @@ const StyledButton = styled.input`
   }
 `;
 
-const StyledInfo = styled.p`
+export const StyledInfo = styled.p`
   margin: 15px 0;
   line-height: 25px;
 
@@ -79,6 +110,3 @@ const StyledInfo = styled.p`
     color: ${({ theme }) => theme.colors.brickRed};
   `}
 `;
-
-
-export { StyledForm, StyledHeader, StyledLabel, StyledLabelText, StyledField, StyledButton, StyledInfo };
