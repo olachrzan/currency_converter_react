@@ -78,9 +78,11 @@ const Form = () => {
 							<StyledLabel>
 								<StyledLabelText>Przelicz na:</StyledLabelText>
 								<StyledField
+									defaultValue=""
 									value={currency}
 									onChange={({ target }) => setCurrency(target.value)}
 								>
+									<option disabled value="">Wybierz walutę</option>
 									{Object.keys(ratesData.rates).map(currency => (
 										<option key={currency} value={currency}>
 											{currency}

@@ -4,6 +4,11 @@ const Result = ({ result }) => {
   if (result === undefined)
     return null
 
+  else if (isNaN(result.finalAmount))
+    return (
+      <StyledResult>Wybierz walutę</StyledResult>
+    )
+
   return (
     <StyledResult>
       {result.initialAmount}&nbsp;PLN&nbsp;={" "}
