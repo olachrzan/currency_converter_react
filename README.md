@@ -2,8 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-It's a simply currency converter that will be further developed.<br>
-You can convert PLN to EUR, USD, GBP or CHF.
+This is a simple currency converter.<br>
+You can convert PLN to any currency you want.<br>
+Currency rates are taken from external API every time you open or reload the website.
 
 ## Demo
 You can find the demo [here](https://olachrzan.github.io/currency_converter_react/)
@@ -15,6 +16,7 @@ You can find the demo [here](https://olachrzan.github.io/currency_converter_reac
 - Create React App
 - Styled Components
 - React Hooks
+- Fetch, Async/await
 
 ## Available Scripts
 
