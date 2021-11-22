@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const useRatesData = () => {
-  const [ratesData, setRatesData] = useState({state: "loading"});
+  const [ratesData, setRatesData] = useState({ state: "loading" });
 
   useEffect(() => {
     const fetchCurrencies = async () => {
@@ -17,7 +17,7 @@ export const useRatesData = () => {
           state: "success"
         });
       } catch {
-        setRatesData({state: "error"})
+        setRatesData({ state: "error" })
       }
     };
 

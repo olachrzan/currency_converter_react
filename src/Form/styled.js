@@ -75,8 +75,7 @@ export const StyledField = styled.select`
 
   ${({ dimension }) => dimension && css`
     padding: 8px;
-  text-align: left;
-
+    text-align: left;
   `}
 
   ${({ validated }) => validated && css`
