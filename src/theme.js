@@ -8,6 +8,6 @@ export const theme = {
     brickRed: "#C62D42"
   },
   breakpoint: {
-    mobile: "500px",
+    mobile: "455px",
   }
 };

@@ -4,7 +4,7 @@ const StyledContainer = styled.div`
   margin-bottom: 30px;
   display: grid;
   grid-template-columns: 1fr 135px 200px 1fr;
-  gap: 30px;
+  gap: 20px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
     display: block;
@@ -24,6 +24,7 @@ const StyledText = styled.p`
   ${({ last }) => last && css`
     grid-column: 3 / 4;
     text-align: left;
+    padding-left: 8px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}) {
       margin-top: 10px;

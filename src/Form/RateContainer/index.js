@@ -1,10 +1,10 @@
 import { StyledContainer, StyledText } from "./styled";
 
-const RateContainer = () => (
+const RateContainer = ({ rate }) => (
   <StyledContainer>
     <StyledText>Aktualny kurs:</StyledText>
     <StyledText last>
-      {/* TODO Rate of current currency  */}
+      {rate === undefined ? "—" : rate.toFixed(2)}
     </StyledText>
   </StyledContainer>
 );

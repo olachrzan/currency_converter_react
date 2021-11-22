@@ -13,7 +13,8 @@ import {
 	StyledLabelText,
 	StyledField,
 	StyledButton,
-	StyledInfo
+	StyledInfo,
+	StyledOption
 } from "./styled";
 import sadFace from "../sadFace.png"
 
@@ -81,16 +82,19 @@ const Form = () => {
 									defaultValue=""
 									value={currency}
 									onChange={({ target }) => setCurrency(target.value)}
+									required
+									validated={wasValidated}
+									onBlur={() => { setWasValidated(true) }}
 								>
-									<option disabled value="">Wybierz walutę</option>
+									<StyledOption disabled value="">Wybierz walutę</StyledOption>
 									{Object.keys(ratesData.rates).map(currency => (
-										<option key={currency} value={currency}>
+										<StyledOption key={currency} value={currency}>
 											{currency}
-										</option>
+										</StyledOption>
 									))}
 								</StyledField>
 							</StyledLabel>
-							<RateContainer />
+							<RateContainer rate={ratesData.rates[currency]} />
 							<StyledButton
 								type="submit"
 								value="Przelicz"

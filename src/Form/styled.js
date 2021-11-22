@@ -87,6 +87,11 @@ export const StyledField = styled.select`
   `}
 `;
 
+export const StyledOption = styled.option`
+  border: 2px solid #bbb;
+  background-color: ${({ theme }) => theme.colors.white};
+`;
+
 export const StyledButton = styled.input`
   margin: 0 20px 10px;
   padding: 10px 20px;
