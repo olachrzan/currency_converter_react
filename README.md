@@ -1,10 +1,11 @@
 # 💲 Currency Converter with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is the result of developing the [previous version of currency converter](https://github.com/olachrzan/currency_converter).
 
-This is a simple currency converter.<br>
-You can convert PLN to any currency you want.<br>
+Now you can convert PLN to any currency you want.<br>
 Currency rates are taken from external API every time you open or reload the website.
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo
 You can find the demo [here](https://olachrzan.github.io/currency_converter_react/)
